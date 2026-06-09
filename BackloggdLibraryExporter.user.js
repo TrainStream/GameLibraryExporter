@@ -17,8 +17,8 @@
 // @connect      github.com
 // @connect      images.igdb.com
 // @connect      howlongtobeat.com
-// @updateURL    https://github.com/TrainStream/GameLibraryExporterLibraryExporter/raw/refs/heads/main/GameLibraryExporter.meta.js
-// @downloadURL  https://github.com/TrainStream/GameLibraryExporterLibraryExporter/raw/refs/heads/main/GameLibraryExporter.user.js
+// @updateURL    https://github.com/TrainStream/GameLibraryExporter/raw/refs/heads/main/GameLibraryExporter.meta.js
+// @downloadURL  https://github.com/TrainStream/GameLibraryExporter/raw/refs/heads/main/GameLibraryExporter.user.js
 // ==/UserScript==
 
 (function () {
