@@ -30,14 +30,11 @@ List of Features:
 - Includes core game data: title, status, release date, average rating, your rating, Backloggd game ID, game URL, and cover image URL.
 - Supports all main Backloggd library states: Played, Playing, Backlog, and Wishlist.
 - Preserves Played sub-statuses like Completed, Retired, Shelved, and Abandoned.
-- Optional genre scanning.
-- Optional platform scanning, with a faster 50-platform mode or full 226-platform mode.
+- On non-Backloggd websites, statuses and their source collections can be configured manually.
+- Optional genre/platform/advanced scanning.
+- Optional platform scanning, with a faster 50-platform mode or full 226-platform mode (Backloggd only). 
 - Optional offline cover image support.
 - Generates a polished offline HTML library viewer, not just a raw data file.
 - HTML viewer includes search, sorting, status filters, genre filters, platform filters, and release-date filtering.
 - Interactive counters show how many games match each status, genre, platform, and filter combination.
-- Column picker lets users show or hide covers, links, genres, platforms, status, ratings, and release dates.
-- Saves viewer preferences such as sort order, light/dark mode, column visibility, and filter display settings.
-- Built-in file converter can convert previous exports between CSV, JSON, and HTML.
-- Floating Backloggd panel with progress bar and export log.
-- Pause, resume, and stop controls for long exports.
+- Column picker lets users show or hide covers, links, genres, emoji, platforms, status, ratings, and release dates.
