@@ -1,6 +1,7 @@
 # Game Library Exporter
 Warning! AI Slop! But it works!<br>
 Newest version can be found here: <a href="https://github.com/TrainStream/GameLibraryExporter/releases">Releases</a><br>
+The html export is the highlight feature, providing various filtering options.<br>
 <br>
 Works on Backloggd.com, HowLongToBeat.com and MobyGames.com by going to their respective user/collection pages!<br>
 Planning to add vndb.org an gamefaqs.gamespot.com!<br>
@@ -16,8 +17,8 @@ Genres and Platforms are additional download tags.<br>
 For Backloggd.com specifically, ~500 games:<br>
 Basic takes ~20-30 seconds, Basic + Genres, ~45-60 seconds.<br>
 Basic + Genres + Platforms 50 ~1.5-2 minutes, and Basic + Genres + Platform 226 can take ~3-4 minutes.<br>
-Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabiltiies. The final html file for ~500 games will be over 2MB.<br>
-The html expport is really the prime feature, with many filtering options.<br>
+Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabiltiies, because of pictures converting to smaller pictures. 
+The final html file for ~500 games with all tag options is over 2MB.<br>
 
 Exporting Menu:<br>
 <img width="358" height="188" alt="Export Menu" src="https://github.com/user-attachments/assets/0e92dfe9-e544-463b-886b-58c9ac8e1632" />
