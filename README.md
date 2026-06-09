@@ -6,7 +6,7 @@ Works on Backloggd.com, HowLongToBeat.com and MobyGames.com by going to their re
 Planning to add vndb.org an gamefaqs.gamespot.com!<br>
 You need Violentmonkey, Tampermonkey, Greasemonkey or another user script manager to install and run this script on your browser!<br>
 <br>
-This browser userscript can be used when you enter your user page on Backloggd.com.<br>
+This browser userscript can be used when you enter your user page on the websites.<br>
 It can export csv, json and html files.<br>
 The more tags you choose for exporting, the longer is gonna take.<br>
 The Basic tag includes, titles, average score, user score, release dates and others.<br>
