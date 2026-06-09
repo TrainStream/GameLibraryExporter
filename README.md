@@ -16,7 +16,8 @@ Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabi
 The html expport is really the prime feature, with many filtering options.<br>
 
 Exporting Menu:<br>
-<img width="358" height="207" alt="Menu" src="https://github.com/user-attachments/assets/e587bfd8-9316-42bc-812c-fd26b72ca03c" /><br>
+<img width="358" height="188" alt="Export Menu" src="https://github.com/user-attachments/assets/ce261104-b879-4a46-bc84-8dba5e99b541" />
+<br>
 
 Exported html:<br>
 <img width="1457" height="1409" alt="Backloggd Library" src="https://github.com/user-attachments/assets/1ccd4d55-9bb9-4dd8-bc05-53f61ebec6cc" />
