@@ -4443,7 +4443,7 @@ ZX81`
     if (panel) panel.classList.toggle('bgd-hltb-preflight-running', !!on);
     if (exportBtn) {
       exportBtn.disabled = !!on;
-      exportBtn.textContent = on ? 'WAIT' : 'Export';
+      exportBtn.textContent = on ? 'LOADING' : 'Export';
     }
     if (configBtn) configBtn.disabled = !!on;
     // During config preflight, suppress the Pause/Stop run controls and keep
