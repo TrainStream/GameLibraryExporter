@@ -17,7 +17,7 @@ Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabi
 The html expport is really the prime feature, with many filtering options.<br>
 
 Exporting Menu:<br>
-<img width="358" height="188" alt="Export Menu" src="https://github.com/user-attachments/assets/ce261104-b879-4a46-bc84-8dba5e99b541" />
+<img width="358" height="188" alt="Export Menu" src="https://github.com/user-attachments/assets/0e92dfe9-e544-463b-886b-58c9ac8e1632" />
 <br>
 
 Exported html:<br>
