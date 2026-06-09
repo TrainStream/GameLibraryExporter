@@ -1,12 +1,15 @@
-# Backloggd Library Exporter
+# Game Library Exporter
 Warning! AI Slop! But it works!<br>
+<br>
+Works on Backloggd.com, HowLongToBeat.com and MobyGames.com by going to their respective user/collection pages! More websites planned!<br>
 You need Violentmonkey, Tampermonkey, Greasemonkey or another user script manager to install and run this script on your browser!<br>
-Newest version can be found here: <a href="https://github.com/TrainStream/BackloggdLibraryExporter/releases">Releases</a><br>
+Newest version can be found here: <a href="https://github.com/TrainStream/GameLibraryExporter/releases">Releases</a><br>
 <br>
 This browser userscript can be used when you enter your user page on Backloggd.com.<br>
 It can export csv, json and html files.<br>
 The more tags you choose for exporting, the longer is gonna take.<br>
 The Basic tag includes, titles, average score, user score, release dates and others.<br>
+For Backloggd.com specifically:
 Basic takes ~20-30 seconds, Basic + Genres, ~45-60 seconds.<br>
 Basic + Genres + Platforms 50 ~1.5-2 minutes, and Basic + Genres + Platform 226 can take ~3-4 minutes.<br>
 Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabiltiies. The final html file for ~500 games will be over 2MB.<br>
@@ -19,7 +22,8 @@ Exported html:<br>
 <img width="1457" height="1409" alt="Backloggd Library" src="https://github.com/user-attachments/assets/1ccd4d55-9bb9-4dd8-bc05-53f61ebec6cc" />
 
 List of Features:
-- Export any Backloggd user’s library.
+- Supports: Backloggd.com, HowLongToBeat.com and MobyGames.com
+- Export the user’s video game library.
 - Download your library as `HTML`, `CSV`, and/or `JSON`.
 - Includes core game data: title, status, release date, average rating, your rating, Backloggd game ID, game URL, and cover image URL.
 - Supports all main Backloggd library states: Played, Playing, Backlog, and Wishlist.
