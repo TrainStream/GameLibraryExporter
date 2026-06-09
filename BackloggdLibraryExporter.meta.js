@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Game Library Exporter
 // @namespace    https://backloggd.com/
-// @version      1.1.0
+// @version      1.1.1
 // @description  Export game libraries from supported websites as HTML, CSV, and JSON.
 // @author       TrainStream
 // Written with Codex and Claude assistance.

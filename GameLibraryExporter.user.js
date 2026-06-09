@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Game Library Exporter
 // @namespace    https://backloggd.com/
-// @version      1.1.0
+// @version      1.1.1
 // @description  Export game libraries from supported websites as HTML, CSV, and JSON.
 // @author       TrainStream
 // Written with Codex and Claude assistance.
@@ -921,7 +921,7 @@ ZX81`
     .filter(Boolean);
 
   const EXPORTER_ID = 'bgd-exporter-root';
-  const EXPORTER_VERSION = '1.1.0';
+  const EXPORTER_VERSION = '1.1.1';
   const EXPORTER_RELEASES_URL = 'https://github.com/TrainStream/GameLibraryExporter/releases';
   // Maximum number of game detail pages fetched in parallel when resolving
   // missing release dates.  Increase cautiously - higher values may trigger
@@ -959,6 +959,15 @@ ZX81`
     try {
       const url = new URL(pageUrl, location.origin);
       return /^\/user\/\d+\/[^/?#]+\/collection\/?$/i.test(url.pathname);
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function isHowLongToBeatUserGamesRootPage(pageUrl = location.href) {
+    try {
+      const url = new URL(pageUrl, location.origin);
+      return /^\/user\/[^/?#]+\/games(\/|$)/i.test(url.pathname);
     } catch (_) {
       return false;
     }
@@ -1209,6 +1218,7 @@ ZX81`
   }
 
   const STATUS_PILL_CONFIG_STORAGE_KEY = 'bgdMobyStatusPillConfig';
+  const PENDING_NAV_MESSAGE_KEY = 'bgdPendingNavMessage';
   const MOBYGAMES_EXPORT_STATE_KEY = 'bgdMobyGamesExportState';
   const HLTB_STATUS_PILL_CONFIG_STORAGE_KEY = 'bgdHowLongToBeatStatusPillConfig';
   const HLTB_EXPORT_STATE_KEY = 'bgdHowLongToBeatExportState';
@@ -4432,6 +4442,7 @@ ZX81`
   function openMobyGamesStatusConfiguration() {
     const collectionUrl = getMobyGamesCollectionRootUrl(location.href);
     if (collectionUrl && !isMobyGamesCollectionRootPage(location.href)) {
+      savePendingNavMessage('Navigated to the correct page. Continue with configurations or exporting.');
       location.href = collectionUrl;
       return;
     }
@@ -4559,6 +4570,12 @@ ZX81`
       return;
     }
     if (isHowLongToBeatHost()) {
+      const gamesRootUrl = getHowLongToBeatUserGamesRootUrl(location.href);
+      if (gamesRootUrl && !isHowLongToBeatUserGamesRootPage(location.href)) {
+        savePendingNavMessage('Navigated to the correct page. Continue with configurations or exporting.');
+        location.href = gamesRootUrl;
+        return;
+      }
       if (hltbPreflightData) {
         renderStatusPillConfigModal();
         return;
@@ -6335,6 +6352,18 @@ ZX81`
     try {
       localStorage.setItem(key, value);
     } catch (_) {}
+  }
+
+  function savePendingNavMessage(message) {
+    storageSet(PENDING_NAV_MESSAGE_KEY, message || '');
+  }
+
+  function flushPendingNavMessage() {
+    const message = storageGet(PENDING_NAV_MESSAGE_KEY, '');
+    if (!message) return;
+    storageSet(PENDING_NAV_MESSAGE_KEY, '');
+    if (panel) panel.classList.add('is-active');
+    addLog(message);
   }
 
   function statusList(item) {
@@ -13412,6 +13441,12 @@ ${viewerScript}  </script>
     const exportStartedAt = Date.now();
 
     try {
+      const collectionUrl = getMobyGamesCollectionRootUrl(location.href);
+      if (collectionUrl && !isMobyGamesCollectionRootPage(location.href)) {
+        savePendingNavMessage('Navigated to the correct page. Continue with configurations or exporting.');
+        location.href = collectionUrl;
+        return;
+      }
       const targetSlug = getExportUserSlug();
       const targetDisplayName = getMobyGamesDisplayNameFromDocument() || targetSlug;
       const configAtExport = normalizeStatusPillConfig(cloneStatusPillConfig(statusPillConfig));
@@ -13538,6 +13573,12 @@ ${viewerScript}  </script>
     const exportStartedAt = Date.now();
 
     try {
+      const gamesRootUrl = getHowLongToBeatUserGamesRootUrl(location.href);
+      if (gamesRootUrl && !isHowLongToBeatUserGamesRootPage(location.href)) {
+        savePendingNavMessage('Navigated to the correct page. Continue with configurations or exporting.');
+        location.href = gamesRootUrl;
+        return;
+      }
       const targetSlug = getExportUserSlug();
       const configAtExport = normalizeStatusPillConfig(cloneStatusPillConfig(statusPillConfig));
       const selectedMappings = getHowLongToBeatConfiguredCategoryMappings(configAtExport);
@@ -14435,7 +14476,12 @@ ${viewerScript}  </script>
   });
   if (sourceRuntime.resumeExport) {
     setTimeout(() => {
+      flushPendingNavMessage();
       sourceRuntime.resumeExport();
+    }, 0);
+  } else {
+    setTimeout(() => {
+      flushPendingNavMessage();
     }, 0);
   }
   } // end initPanel()
