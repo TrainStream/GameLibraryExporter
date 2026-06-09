@@ -3,7 +3,7 @@ Warning! AI Slop! But it works!<br>
 Newest version can be found here: <a href="https://github.com/TrainStream/GameLibraryExporter/releases">Releases</a><br>
 The html export is the highlight feature, providing various filtering options.<br>
 <br>
-Works on Backloggd.com, HowLongToBeat.com and MobyGames.com by going to their respective user/collection pages!<br>
+Works on the user pages of: Backloggd.com, HowLongToBeat.com and MobyGames.com.<br>
 Planning to add vndb.org an gamefaqs.gamespot.com!<br>
 You need Violentmonkey, Tampermonkey, Greasemonkey or another user script manager to install and run this script on your browser!<br>
 <br>
