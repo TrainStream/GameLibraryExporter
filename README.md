@@ -1,5 +1,5 @@
 # Game Library Exporter
-Warning! AI Slop! But it works!<br>
+Warning! AI Slop user script! But it works!<br>
 Newest version can be found here: <a href="https://github.com/TrainStream/GameLibraryExporter/releases">Releases</a><br>
 The html export is the highlight feature, providing various filtering options.<br>
 <br>
