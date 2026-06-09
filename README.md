@@ -10,7 +10,7 @@ This browser userscript can be used when you enter your user page on Backloggd.c
 It can export csv, json and html files.<br>
 The more tags you choose for exporting, the longer is gonna take.<br>
 The Basic tag includes, titles, average score, user score, release dates and others.<br>
-For Backloggd.com specifically:
+For Backloggd.com specifically, ~500 games:
 Basic takes ~20-30 seconds, Basic + Genres, ~45-60 seconds.<br>
 Basic + Genres + Platforms 50 ~1.5-2 minutes, and Basic + Genres + Platform 226 can take ~3-4 minutes.<br>
 Offline Covers option adds another ~20-30 seconds or more. Depends on CPU capabiltiies. The final html file for ~500 games will be over 2MB.<br>
