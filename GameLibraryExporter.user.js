@@ -2996,7 +2996,7 @@ ZX81`
               <button class="bgd-minimize-button" type="button" id="bgdMinimizeBtn" title="Minimize exporter" aria-label="Minimize exporter"><svg class="bgd-btn-icon" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><line x1="1" y1="5" x2="9" y2="5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             </div>
           </div>
-          <span class="bgd-version-notice" id="bgdVersionNotice">NEW VERSION!</span>
+          <span class="bgd-version-notice" id="bgdVersionNotice">UPDATE AVAILABLE!</span>
           <div class="bgd-actions">
             <div class="bgd-checks">
               <div class="bgd-checks-row">
